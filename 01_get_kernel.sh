@@ -1,6 +1,5 @@
 #!/bin/sh
-KERNEL_SOURCE_URL=https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.15.tar.xz
-
+KERNEL_SOURCE_URL=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.3.tar.xz
 
 # Grab everything after the '=' character.
 DOWNLOAD_URL=$(echo $KERNEL_SOURCE_URL| cut -f2 -d'=')
@@ -16,7 +15,7 @@ cd source
 wget -c $DOWNLOAD_URL
 
 # Delete folder with previously extracted kernel.
-echo "Deleting old kernel folder ..."
+echo "Borrando old kernel folder ..."
 rm -rf ../work/kernel
 mkdir ../work/kernel
 
